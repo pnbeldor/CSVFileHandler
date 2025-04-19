@@ -9,7 +9,7 @@ include(FetchContent)
 FetchContent_Declare(
     rapidcsv
     GIT_REPOSITORY https://github.com/d99kris/rapidcsv
-    GIT_TAG        master
+    GIT_TAG        v8.85
 )
 FetchContent_MakeAvailable(rapidcsv)
 

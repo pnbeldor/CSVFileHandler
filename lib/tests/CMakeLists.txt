@@ -9,7 +9,7 @@ if(BUILD_TESTING)
                         PUBLIC "${PROJECT_SOURCE_DIR}/lib/include"
                         )
 
-    add_test(NAME RapidCSVTest COMMAND CSVFileHandlerTest)
+    add_test(NAME CSVFileHandlerTest COMMAND CSVFileHandlerTest)
     include(GoogleTest)
 
     gtest_discover_tests(CSVFileHandlerTest)
