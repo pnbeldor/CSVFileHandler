@@ -70,10 +70,10 @@ A polygon representation of Calgary:
 "51.176094, -113.923462" \
 ```
 ## Performance Consideration
-Consider optimize with the following performance considerations:
-    * Pre-converting DMS to decimal during CSV loading
-    * Adding a cache for parsed coordinates
-    * Using parallel processing for the search
-    * Better handling of the exceptions
-    * Adding unit tests
+Consider optimizing the application with the following performance considerations:
+   * Pre-converting DMS to decimal during CSV loading
+   * Adding a cache for parsed coordinates
+   * Using parallel processing for the search
+   * Better handling of the exceptions
+   * Adding unit tests
 
