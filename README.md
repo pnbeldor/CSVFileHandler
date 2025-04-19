@@ -12,24 +12,24 @@ to build the application, the following tools are needed:
 
 
 ## Application structure
-
+```
 csv_search/
 ├── CMakeLists.txt
-├──lib
+├── lib/
 │   ├── CMakeLists.txt
 │   ├── include/
-│   │   └── CSVFileHandler.h
-|   |   └── CSVParser.h
-|   |   └── RapidCSVParser.h
+│   │   ├── CSVFileHandler.h
+│   │   ├── CSVParser.h
+│   │   └── RapidCSVParser.h
 │   ├── src/
-│   │    └── CSVFileHandler.cpp
-|   |    └── RapidCSVParser.cpp
-|   ├── CMakeLists.txt
+│   │   ├── CSVFileHandler.cpp
+│   │   └── RapidCSVParser.cpp
 │   └── tests/
 │       ├── CMakeLists.txt
 │       └── CSVFileHandlerTests.cpp
-|── main.cpp
+├── main.cpp
 └── README.md
+```
 
 
 to build the application:
@@ -38,7 +38,7 @@ to build the application:
     * make -j
 
 ## Basic syntax
-./CSVFileHandler <filename> [options]
+    ./CSVFileHandler <filename> [options]
 
 ## Get Help
     ./CSVFileHandler --help
@@ -57,6 +57,7 @@ The program provide support both format for coordinates:
     DMS (Degree/Minutes/Seconds): "36° 00'N, 138° 00' E"
 
 # Example
+```
 A polygon representation of Calgary:
 /CSVFileHandler ImageFile.csv  --polygon \
 "51.176094, -113.923462" \
@@ -67,9 +68,9 @@ A polygon representation of Calgary:
 "51.148535, -114.226960" \
 "51.174372, -114.088257" \
 "51.176094, -113.923462" \
-
+```
 ## Performance Consideration
-If it was a commercial project, I would have made the following performance considerations:
+Consider optimize with the following performance considerations:
     * Pre-converting DMS to decimal during CSV loading
     * Adding a cache for parsed coordinates
     * Using parallel processing for the search
