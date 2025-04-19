@@ -38,19 +38,19 @@ to build the application:
     * make -j
 
 ## Basic syntax
-./CSVFileManager <filename> [options]
+./CSVFileHandler <filename> [options]
 
 ## Get Help
-    ./CSVFileManager --help
+    ./CSVFileHandler --help
 
 ## Basic Search
 Search for rows where specific columns match given values
-    ./CSVFileManager imageFile.csv --search "Type=png"
+    ./CSVFileHandler imageFile.csv --search "Type=png"
 
 ## Multiple criteria will be compiled with AND logic
 
 ## Determine id a point is inside of a polygon
-    ./CSVFileManager path/to/file.csv --polygon <"lat1, long1"> <"lat2,long2"> .....
+    ./CSVFileHandler path/to/file.csv --polygon <"lat1, long1"> <"lat2,long2"> .....
 
 The program provide support both format for coordinates:
     Decimal degrees: "51.176094, -113.923462"
@@ -58,7 +58,7 @@ The program provide support both format for coordinates:
 
 # Example
 A polygon representation of Calgary:
-/CSVFileManager ImageFile.csv  --polygon \
+/CSVFileHandler ImageFile.csv  --polygon \
 "51.176094, -113.923462" \
 "50.911922, -113.911103" \
 "50.898898, -114.121216" \
@@ -76,4 +76,3 @@ If it was a commercial project, I would have made the following performance cons
     * Better handling of the exceptions
     * Adding unit tests
 
-The program only handles equal comparison.
