@@ -12,7 +12,7 @@
 
 void printHelp()
 {
-  std::cout << "Usage: ./CSVSearch <filename> [options]\n"
+  std::cout << "Usage: ./CSVFileManager <filename> [options]\n"
             << "Options:\n"
             << "  --search <column1>=<value1> [<column2>=<value2> ...]  Search "
                "by exact matches\n"
