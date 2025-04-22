@@ -5,11 +5,10 @@
 the application use CMake
 
 to build the application, the following tools are needed:
-    * git
-    * c++17
-    * CMake 3.20 or Higher
-    * RapidCSV library (automatically downloaded during build)
-
+   * git
+   * c++17
+   * CMake 3.20 or Higher
+   * RapidCSV library (automatically downloaded during build)
 
 ## Application structure
 ```
@@ -31,15 +30,16 @@ csv_search/
 └── README.md
 ```
 
-
 to build the application:
-    *mkdir build && cd build/
-    * cmake -S ./.. -B . -G "Unix MakeFiles"
-    * cmake --build . --config Debug --target all -j 8 --
-
+```
+   * mkdir build && cd build/
+   * cmake -S ./.. -B . -G "Unix MakeFiles"
+   * cmake --build . --config Debug --target all -j 8 --
+```
 to run the tests:
-    * ctest -j12 -C Debug -T test --output-on-failure
-
+```
+   * ctest -j12 -C Debug -T test --output-on-failure
+```
 ## Basic syntax
     ./CSVFileHandler <filename> [options]
 
@@ -47,8 +47,8 @@ to run the tests:
     ./CSVFileHandler --help
 
 ## Basic Search
-Search for rows where specific columns match given values
-    ./CSVFileHandler imageFile.csv --search "Type=png"
+Search for rows where specific columns match given values: 
+```./CSVFileHandler imageFile.csv --search "Type=png"```
 
 ## Multiple criteria will be compiled with AND logic
 
@@ -60,8 +60,8 @@ The program provide support both format for coordinates:
     DMS (Degree/Minutes/Seconds): "36° 00'N, 138° 00' E"
 
 # Example
-```
 A polygon representation of Calgary:
+```
 /CSVFileHandler ImageFile.csv  --polygon \
 "51.176094, -113.923462" \
 "50.911922, -113.911103" \
@@ -79,4 +79,5 @@ Consider optimizing the application with the following performance consideration
    * Using parallel processing for the search
    * Better handling of the exceptions
    * Adding unit tests
+   * Coordinate name is hard coded. If we would expected different name, we need to pass it as a command line argument
 
