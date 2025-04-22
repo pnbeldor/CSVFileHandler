@@ -49,7 +49,7 @@ Search for rows where specific columns match given values
 
 ## Multiple criteria will be compiled with AND logic
 
-## Determine id a point is inside of a polygon
+## Determine if a point is inside of a polygon
     ./CSVFileHandler path/to/file.csv --polygon <"lat1, long1"> <"lat2,long2"> .....
 
 The program provide support both format for coordinates:
