@@ -97,8 +97,8 @@ int main(int argc, char *argv[])
     }
 
     // load the file to the buffer
-    std::unique_ptr<ICSVParser> parser = std::make_unique<RapidCSVParser>(argv[1]);
-    CSVFileHandler handler(parser);
+    //std::unique_ptr<ICSVParser> parser = std::make_unique<RapidCSVParser>(argv[1]);
+    CSVFileHandler handler(std::make_unique<RapidCSVParser>(argv[1]));
 
     std::string arg = argv[2];
  

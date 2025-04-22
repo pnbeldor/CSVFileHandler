@@ -14,9 +14,8 @@
 
 //Constructor: Load the file
 
-CSVFileHandler::CSVFileHandler(std::unique_ptr<ICSVParser>& csvParser)
+CSVFileHandler::CSVFileHandler(std::unique_ptr<ICSVParser> csvParser) : parser(std::move(csvParser))
 {
-    parser = std::move(csvParser);
 }
 
 //Destructor

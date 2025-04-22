@@ -11,9 +11,9 @@ class MockCSVParser : public ICSVParser
 {
 public:
     MOCK_METHOD(std::vector<std::string>, GetHeaders, (), (const, override));
-    MOCK_METHOD(std::vector<std::string>, GetRow, (size_t rowIndex), (const, override));
-    MOCK_METHOD(std::vector<std::string>, GetColumn, (const std::string& column), (const, override));
-    MOCK_METHOD(std::string, GetCell, (const std::string&columnName, size_t rowIndex), (const, override));
+    MOCK_METHOD(std::vector<std::string>, GetRow, (size_t), (const, override));
+    MOCK_METHOD(std::vector<std::string>, GetColumn, (const std::string&), (const, override));
+    MOCK_METHOD(std::string, GetCell, (const std::string&, size_t), (const, override));
     MOCK_METHOD(size_t, GetRowCount, (), (const, override));
     MOCK_METHOD(size_t, GetColumnCount, (), (const, override));
     MOCK_METHOD(bool, IsDocumentLoaded, (), (override));
