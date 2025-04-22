@@ -35,7 +35,10 @@ csv_search/
 to build the application:
     *mkdir build && cd build/
     * cmake -S ./.. -B . -G "Unix MakeFiles"
-    * make -j
+    * cmake --build . --config Debug --target all -j 8 --
+
+to run the tests:
+    * ctest -j12 -C Debug -T test --output-on-failure
 
 ## Basic syntax
 ./CSVFileManager <filename> [options]

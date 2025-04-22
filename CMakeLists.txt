@@ -21,6 +21,16 @@ FetchContent_MakeAvailable(rapidcsv)
 )
 
 FetchContent_MakeAvailable(googletest)
+
+ include(FetchContent)
+ FetchContent_Declare(
+    fast-cpp-csv-parser
+    GIT_REPOSITORY https://github.com/ben-strasser/fast-cpp-csv-parser.git
+    GIT_TAG        master
+)
+
+FetchContent_MakeAvailable(fast-cpp-csv-parser)
+
 add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(lib)

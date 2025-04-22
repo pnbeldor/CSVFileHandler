@@ -34,7 +34,7 @@ using SearchCriteria = std::vector<SearchCriterion>;
 class CSVFileHandler
 {
 public:
-    CSVFileHandler(std::unique_ptr<ICSVParser>& csvParser);
+    CSVFileHandler(std::unique_ptr<ICSVParser> csvParser);
     virtual ~CSVFileHandler();
 
     // Functions prototypes
